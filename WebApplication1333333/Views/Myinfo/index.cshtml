@@ -1,0 +1,20 @@
+﻿@model WebApplication1333333.Models.Myinfo
+
+@{
+    ViewData["Title"] = "Info";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Info</p>
+
+@if (Model != null)
+{
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Age:</strong> @Model.Age</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Occupation:</strong> @Model.Occupation</p>
+}
+else
+{
+    <p>No configuration data available.</p>
+}

@@ -1,16 +1,11 @@
 {
-  "Companies": [
-    {
-      "Name": "Microsoft",
-      "Employees": 320000
-    },
-    {
-      "Name": "Apple",
-      "Employees": 660000
-    },
-    {
-      "Name": "Google",
-      "Employees": 790000
-    }
-  ]
+  "Microsoft": {
+    "employees": 144000
+  },
+  "Apple": {
+    "employees": 147000
+  },
+  "Google": {
+    "employees": 156500
+  }
 }

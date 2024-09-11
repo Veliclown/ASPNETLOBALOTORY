@@ -1,15 +1,17 @@
 using WebApplication1333333.Models;
+using WebApplication1333333.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<XmlService>();
-builder.Services.AddScoped<JsonService>();
-builder.Services.AddScoped<IniService>();
-builder.Services.AddSingleton<JsonMyService>();
+builder.Services.AddTransient<CompanyService>();
+
+builder.Configuration
+    .AddJsonFile("config.json")
+    .AddXmlFile("config.xml")
+    .AddIniFile("config.ini");
+
 
 
 var app = builder.Build();
